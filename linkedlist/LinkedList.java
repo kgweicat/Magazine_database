@@ -1,11 +1,3 @@
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 package linkedlist;
 
 import java.io.FileWriter;
@@ -13,15 +5,10 @@ import java.io.IOException;
 
 /**
  *
- * @author Che-Wei Chou
- * @param <Gen>
+ * @author kgweicat
+ * @param <E>
  */
-//magazine magazine magazine magazine magazine 
-//magazine magazine magazine magazine magazine 
-//magazine magazine magazine magazine magazine 
-//magazine magazine magazine magazine magazine 
-//magazine magazine magazine magazine magazine 
-public class LinkedList<Gen extends IDedObject> {
+public class LinkedList<E extends IDedObject> {
 
     private Node head;  //first item of the linkedlist
     private Node tail;  //last item of the linkedlist
@@ -31,9 +18,8 @@ public class LinkedList<Gen extends IDedObject> {
      *
      * @param n the item to be added
      */
-    public void addFirst(Gen n) {
-        //I actually don't know how this line works but it works
-        Node<Gen> item = new Node<>(n);
+    public void addFirst(E n) {
+        Node<E> item = new Node<>(n);
         //If list is empty, then set the item to be the first item of the list.
         if (head == null) {
             head = item;
@@ -59,13 +45,14 @@ public class LinkedList<Gen extends IDedObject> {
             head = head.getNext();
             return n;
         }
+        //if list is empty, return null
         return null;
     }
 
     /**
      * Clear all items in the list.
      */
-    //Note: if it is not doubly linkes, just make head null
+    //Note: if it is not doubly linked, just make head null
     public void clearList() {
         while (head != null) {
             deleteFirst();
@@ -157,7 +144,7 @@ public class LinkedList<Gen extends IDedObject> {
      * @return the deleted item. Null if item is not in the list.
      */
     public IDedObject deleteSearch(int id) {
-        //I don't know how to explain but it's okay I know you understand
+        
         IDedObject obj = null;
 
         Node current = head;
@@ -175,30 +162,6 @@ public class LinkedList<Gen extends IDedObject> {
     }
   
     /**
-     * Hello this is a very useless JavaDoc because I have no clue what I'm doing.
-     */
-    public void WriteJSON(){
-        Node current = head;
-        JSONArray IDedObjectList = new JSONArray();
-        int count = 1;
-        while (current != null){
-            JSONObject obj = new JSONObject();
-            String key = "Magazine " + count;
-            count++;
-            obj.put(key, current.getData());
-            IDedObjectList.put(obj);
-            current = current.getNext();
-        }
-        
-        try (FileWriter file = new FileWriter("IDedObjects.json")){
-            file.write(IDedObjectList.toString());
-            file.flush();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    /**
      * Print out the list.
      *
      * @return All the items in the list.
@@ -212,9 +175,6 @@ public class LinkedList<Gen extends IDedObject> {
             result += current.toString() + "\n";
             current = current.getNext();
         }
-        /*if (result.length() > 0) {
-            result = result.substring(0, result.length() - 1);
-        }*/
         return result;
     }
 
