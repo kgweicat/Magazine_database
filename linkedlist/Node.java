@@ -2,7 +2,7 @@ package linkedlist;
 
 /**
  *
- * @author kgweicat
+ * @author Che-Wei (Joanne) Chou
  * @param <E>
  */
 public class Node <E extends IDedObject>{
