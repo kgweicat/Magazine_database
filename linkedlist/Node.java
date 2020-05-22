@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package linkedlist;
 
 /**
  *
- * @author Che-Wei Chou
- * @param <Gen>
+ * @author kgweicat
+ * @param <E>
  */
-public class Node <Gen extends IDedObject>{
-    private Gen data;   //item in the node
+public class Node <E extends IDedObject>{
+    private E data;             //item in the node
     private Node previous;      //Linked to previous node
     private Node next;          //Linked to next node
     
