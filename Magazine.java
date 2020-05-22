@@ -2,7 +2,7 @@ import linkedlist.IDedObject;
 
 /**
  *
- * @author kgweicat
+ * @author Che-Wei (Joanne) Chou
  */
 public class Magazine implements IDedObject {
 
