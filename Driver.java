@@ -3,7 +3,7 @@ import linkedlist.LinkedList;
 
 /**
  *
- * @author kgweicat
+ * @author Che-Wei (Joanne) Chou
  */
 public class Driver {
 
