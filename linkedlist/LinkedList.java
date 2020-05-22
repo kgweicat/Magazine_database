@@ -5,7 +5,7 @@ import java.io.IOException;
 
 /**
  *
- * @author kgweicat
+ * @author Che-Wei (Joanne) Chou
  * @param <E>
  */
 public class LinkedList<E extends IDedObject> {
