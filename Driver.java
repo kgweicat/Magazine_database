@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.util.Scanner;
 import linkedlist.LinkedList;
-import java.io.FileReader;
-
 
 /**
  *
- * @author Che-Wei Chou
+ * @author kgweicat
  */
 public class Driver {
 
@@ -19,8 +11,6 @@ public class Driver {
         Scanner keyboard = new Scanner(System.in);
         LinkedList list = new LinkedList();
         
-        //Object obj = new JSONParser().parse(new FileReader("IDedObjects.json"));
-
         int choice;
 
         do {
@@ -52,7 +42,7 @@ public class Driver {
                         System.out.println("Emptied.\n");
                     }
                     break;
-                case 2: //Find a magazine in the list hbased on user ID
+                case 2: //Find a magazine in the list based on user ID
                     System.out.print("Enter ID: ");
                     int id = isInt(keyboard);
                     if (!list.contains(id)) {
@@ -61,7 +51,6 @@ public class Driver {
                         Magazine mag = (Magazine) list.getIDedObject(id);
                         System.out.println(mag);
                     }
-                    //System.out.println();
                     break;
                 case 3:
                     //Ask user for magazine data and create a new magazine
@@ -105,8 +94,6 @@ public class Driver {
                     break;
             }
         } while (choice != 7);
-        
-        list.WriteJSON();
 
         System.out.println("Done.");
 
