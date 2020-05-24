@@ -1,14 +1,14 @@
 # Magazine_database
-Java project, using doubly-linked-list to create a magazine database
+This program uses a doubly-linked list to create a magazine database.
 
-I constructed my own generic LinkedList class using a doubly-linked list, and use my LinkedList to create a driver file that is able to store details of magazines.
+I constructed my own generic LinkedList class using a doubly-linked list, and used my LinkedList to create a driver file that is able to store details of magazines.
 
-I construct the magazine class, which implements the IDObject interface.
+I constructed an interface (IDedObject) and a class (Magazine) which implements IDedObject.
 
 The LinkedList I created allows the user to do the following: 
- - insert item at front
- - delete the first item
- - delete a designated item
+ - insert new item as first item in list
+ - delete first item
+ - delete designated item
  - print all items
  - delete all items
- - search for a certain item
+ - search for specific item
